@@ -1,0 +1,29 @@
+// Footer
+
+footer span {
+  border: 3px solid #4baae6;
+  width: 100%;
+  display: block;
+}
+.footer {
+  a {
+    color: rgb(115, 115, 115);
+    text-decoration: underline;
+  }
+  p {
+    margin: 0;
+    text-align: left;
+    padding: 0.3rem 0;
+  }
+
+  &-bottom {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    &-right {
+      text-align: right;
+    }
+  }
+}

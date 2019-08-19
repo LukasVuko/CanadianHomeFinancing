@@ -1,0 +1,62 @@
+<div class="calcTwo">
+  <h2 class="md">Refinance Calculator</h2>
+  <p class="sm">
+    Use our mortgage calculator to make estimating your monthly mortgage easy.
+    Just Enter the home value, your down payment amount, the type of mortgage,
+    and the interest rate. See how much house you afford!
+  </p>
+  <div class="calc-calculator">
+    <div class="calc-calculator-left bg-light2">
+      <!-- ********************* -->
+      <h3>Mortgage Information</h3>
+      <label for="2-input-1">Current Home Value</label>
+      <div class="input-container">
+        <i class="fas fa-dollar-sign icon"></i>
+        <input class="input input-field" type="text" name="2-input-1" />
+      </div>
+      <label for="2-input-2">Current Loan Amount</label>
+      <div class="input-container">
+        <i class="fas fa-dollar-sign icon"></i>
+        <input class="input input-field" type="text" name="2-input-2" />
+      </div>
+      <label for="2-input-3">Current Monthly Payment</label>
+      <div class="input-container">
+        <i class="fas fa-dollar-sign icon"></i>
+        <input class="input input-field" type="text" name="2-input-3" />
+      </div>
+      <label for="2-input-4">Cash Out Amount</label>
+      <div class="input-container">
+        <i class="fas fa-dollar-sign icon"></i>
+        <input class="input input-field" type="text" name="2-input-4" />
+      </div>
+      <label for="2-input-5">Refinance Term</label>
+      <div class="input-container">
+        <select name="2-input-5" id="type">
+          <option value="15F">15 Year Fixed</option>
+          <option value="30F">30 Year Fixed</option>
+          <option value="ARM">5/1 Adjustable Rate Moratgage</option>
+        </select>
+      </div>
+      <label for="2-input-6">Interest Rate</label>
+      <div class="input-container">
+        <input
+          class="input input-2 last input-field"
+          type="text"
+          name="2-input-6"
+        />
+        <i class="fas fa-percent icon icon-2"></i>
+      </div>
+      <button class="btn btn-primary flex">Calculate</button>
+      <!-- ********************* -->
+    </div>
+    <div class="calc-calculator-right bg-light2">
+      <h3>Monthly Payment Breakdown</h3>
+      <div class="center">
+        <h2 style="color: black">
+          Your total monthly payment is ...
+        </h2>
+        <h1 class="xxlg">$1240</h1>
+      </div>
+    </div>
+  </div>
+</div>

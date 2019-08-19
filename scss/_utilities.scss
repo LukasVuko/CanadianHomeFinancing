@@ -1,0 +1,110 @@
+// Container
+.container {
+  // margin-top: 6rem;
+  // margin-bottom: 3rem;
+  max-width: $max-width-main;
+  margin: auto;
+  overflow: hidden;
+  height: 100%;
+}
+
+// Text Styles - Font sizes
+.xlg {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lg {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 100;
+  color: $primary-color;
+}
+
+.md {
+  font-size: 1.5rem;
+}
+
+.sm {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.x-sm {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.small-link {
+  color: $jumbo-link;
+  text-decoration: underline;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.line {
+  height: 1px;
+  background: #ccc;
+  margin: 1.5rem 0;
+}
+
+.center {
+  text-align: center;
+}
+
+// Backgrounds
+.bg {
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-light {
+    @include set-background($light-color);
+  }
+  &-light2 {
+    @include set-background($light-color2);
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-white {
+    @include set-background(#fff);
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  background: $light-color;
+  color: white;
+  padding: 0.7em 0.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease-in;
+  text-align: center;
+
+  &.btn-primary {
+    @include set-background($primary-color);
+    &:hover {
+      background: lighten($primary-color, 5%);
+    }
+  }
+  &.btn-dark {
+    @include set-background($dark-color);
+    &:hover {
+      background: lighten($dark-color, 5%);
+    }
+  }
+  &:hover {
+    background: lighten($dark-color, 20%);
+    color: #fff;
+  }
+}

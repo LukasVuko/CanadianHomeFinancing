@@ -1,0 +1,44 @@
+// JumboTron //
+.jumbo {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(75, 172, 233, 0.7)),
+    url("../img/house.jpeg");
+  height: 55vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  padding: 3rem 0;
+  .container {
+    display: flex;
+  }
+}
+
+.jumbo-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 90%;
+  margin: auto 0;
+  width: 60%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    font-weight: 100;
+    line-height: 0;
+  }
+  .jumbo-buttons {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    & a {
+      flex-grow: 1;
+      margin: 0.3rem;
+      margin-left: 0;
+    }
+    &-top {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

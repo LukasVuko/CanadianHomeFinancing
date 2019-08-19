@@ -1,0 +1,52 @@
+$primary-color: rgb(75, 170, 230);
+$dark-color: rgb(20, 40, 60);
+$light-color: rgb(246, 246, 246);
+$light-color2: rgb(230, 230, 230);
+$gradient-1: rgba(255, 255, 255, 0.7);
+$gradient-2: rgba(75, 172, 233, 0.7);
+$white: white;
+$max-width-nav: 1200px;
+$max-width-main: 1100px;
+$jumbo-link: rgb(115, 115, 115);
+
+// Set text color based on background
+@function set-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return rgb(115, 115, 115);
+  } @else {
+    @return #fff;
+  }
+}
+
+// Set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+$background-img: url("./img/house.jpeg");
+
+// Margin & Padding
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  // All around margin
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  // Vertical Margin
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  // All around Padding
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  // Vertical Padding
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+}

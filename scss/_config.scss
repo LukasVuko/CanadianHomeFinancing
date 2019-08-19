@@ -39,6 +39,9 @@ $spaceamounts: (1, 2, 3, 4, 5);
   .my-#{$space} {
     margin: #{$space}rem 0;
   }
+  .mb-#{$space} {
+    margin-bottom: #{$space}rem 0;
+  }
 
   // All around Padding
   .p-#{$space} {

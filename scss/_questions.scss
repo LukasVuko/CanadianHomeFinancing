@@ -1,0 +1,72 @@
+// Questions
+
+.questions {
+  margin-bottom: 2rem;
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem 4rem;
+  }
+}
+
+// Accordion
+
+.tab-group {
+  margin: 1em auto 0 auto;
+  p {
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+  }
+}
+
+.tab {
+  position: relative;
+}
+
+.tab input {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -999;
+}
+
+.tab label {
+  background: white;
+  color: darken($primary-color, 10%);
+  cursor: pointer;
+  display: block;
+  line-height: 3;
+  padding-left: 0.5em;
+  transition: letter-spacing 0.55s;
+}
+
+.tab input:checked + label,
+.tab label:hover {
+  // background: darken(white, 5%);
+  letter-spacing: 1px;
+}
+
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.55s;
+  button {
+    margin-bottom: 1rem;
+  }
+  ul {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+/* open the tab when label is checked */
+
+.tab input:checked ~ .tab-content {
+  max-height: 20em;
+}
+
+@import "mobile";

@@ -4,82 +4,35 @@
 @import "pageStructure";
 @import "jumbo";
 @import "calc";
+@import "nowWhat";
+@import "questions";
 
-// Now what //
-.now-what {
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  padding: 2rem 0;
+// Footer
+
+footer span {
+  border: 3px solid #4baae6;
+  width: 100%;
+  display: block;
 }
+.footer {
+  a {
+    color: rgb(115, 115, 115);
+    text-decoration: underline;
+  }
+  p {
+    margin: 0;
+    text-align: left;
+    padding: 0.3rem 0;
+  }
 
-// Questions
-
-.questions {
-  height: 100vh;
-  margin-bottom: 2rem;
-  &-inner {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 2rem;
+  &-bottom {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    &-right {
+      text-align: right;
+    }
   }
 }
-
-// Accordion
-
-.tab-group {
-  margin: 1em auto;
-}
-
-.tab {
-  position: relative;
-}
-
-.tab input {
-  left: 0;
-  position: absolute;
-  top: 0;
-  z-index: -999;
-}
-
-.tab label {
-  background: $primary-color;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-weight: bold;
-  line-height: 3;
-  margin-bottom: 0.5em;
-  padding-left: 0.5em;
-  transition: letter-spacing 0.55s;
-}
-
-.tab input:focus + label,
-.tab label:hover {
-  background: lighten($primary-color, 5%);
-  letter-spacing: 1px;
-}
-
-.tab-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.35s;
-}
-
-.tab-content p {
-  margin: 1em 0;
-}
-
-/* open the tab when label is checked */
-
-.tab input:checked ~ .tab-content {
-  max-height: 6.25em;
-}
-
-.tab > input:not(:focus) ~ .tab-content {
-  max-height: 0;
-  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1) 0.15s;
-}
-
-@import "mobile";
